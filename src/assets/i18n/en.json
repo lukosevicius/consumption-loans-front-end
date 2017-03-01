@@ -54,7 +54,12 @@
   "AddCod":"Enter code",
   "CheckS" : "Check status",
   "LoanbyCode" : "Check loan status",
-  "Drafthead": "Customers who have uncompleted drafts"
+  "Drafthead": "Customers who have uncompleted drafts",
+  "Monthc" : "Month",
+  "AmountLeft" : "Amount left",
+  "paymentMON" : "Monthly payment(included 0,70 EUR monthly contract fee)",
+  "LoanInc" : "Interest payable",
+  "ContractPay" : "Contract fee"
 
 
 }

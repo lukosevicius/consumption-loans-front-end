@@ -9,7 +9,7 @@
   <label class="col-xs-5" style="text-align: right">{{'loaners1' | translate}}</label>
   <div class="col-xs-4">
     <input type="radio" name="take1" [(ngModel)]="ifAlone" checked>{{'loaners2' | translate}}
-    <input type="radio" name="take1" [(ngModel)]="ifAlone" value="true">{{'loaners3' | translate}})
+    <input type="radio" name="take1" [(ngModel)]="ifAlone" value="true">{{'loaners3' | translate}}
   </div>
   <label col-xs-3></label>
   <div *ngIf="ifAlone">
@@ -28,17 +28,17 @@
   <input [(ngModel)]="incomeValue" class="digits col-xs-1">
   <label class="col-xs-1">{{'EURmo' | translate}}</label>
   <div class="col-xs-12">
-    <button type="submit"  class="btn btn-primary" (click)="showValue()">{{'calculate' | translate}}</button>
+    <button type="submit"  class="btn btn-primary" (click)="showValue()">{{'claculate' | translate}}</button>
   </div>
   <div *ngIf="valida">
     <table class="table">
       <thead class="thead-inverse">
       <tr>
-        <th>Mėnesis</th>
-        <th>Likusi suma</th>
-        <th>Mėnesinis mokestis (* įtrauktas 0,70 Eur mėnesinis paslaugų mokestis)</th>
-        <th>Mokėtinos palūkanos</th>
-        <th>Sutarties mokestis</th>
+        <th>{{'Monthc' | translate}}</th>
+        <th>{{'AmountLeft' | translate}}</th>
+        <th>{{'paymentMON' | translate}}</th>
+        <th>{{'LoanInc' | translate}}</th>
+        <th>{{'ContracPay' | translate}}</th>
       </tr>
       </thead>
       <tbody align="center" style="">
