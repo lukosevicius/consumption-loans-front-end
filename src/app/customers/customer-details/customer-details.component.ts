@@ -45,7 +45,7 @@ export class CustomerDetailsComponent implements OnInit {
   }
 
   acceptLoan(): void {
-    this.customer.status = "Patvirtina"
+    this.customer.status = "Patvirtinta"
 
     this.customerService.updateAccept(this.customer);
        // .then(() => this.goBack());
