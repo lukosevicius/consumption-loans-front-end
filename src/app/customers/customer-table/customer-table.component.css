@@ -1,23 +1,36 @@
 .panel > .panel-heading {
-  background-image: none;
-  background-color: orange;
-  color: white;
+  background-color: lightgrey;
+  border-top:double;
+  border-left: double;
+  border-bottom: double;
+  border-right:double;
+  border-top-left-radius: .5cm;
+  border-top-right-radius: .5cm;
+  border-bottom-left-radius: .5cm;
+  border-bottom-right-radius: .5cm;
+  border-color: #f5871f;
 }
-
 
 
 .selected {
   background-color: #CFD8DC !important;
-  color: white;
+  color: #cccccc;
 }
 
 button {
   margin-top: 20px;
   font-family: Arial;
-  background-color: #eee;
   border: none;
   padding: 5px 10px;
-  border-radius: 4px;
+  border-top:double;
+  border-left: double;
+  border-bottom: double;
+  border-right:double;
+  border-top-left-radius: .5cm;
+  border-top-right-radius: .5cm;
+  border-bottom-left-radius: .5cm;
+  border-bottom-right-radius: .5cm;
+  border-color: #f5871f;
   cursor: pointer; cursor: hand;
 }
 button:hover {
