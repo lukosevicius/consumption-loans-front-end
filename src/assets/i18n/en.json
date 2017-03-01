@@ -1,3 +1,30 @@
 {
-  "Form" : "form"
+  "Form" : "Form",
+  "Valid": "Valid",
+  "Save" : "Save",
+  "Loan size" : "Loan size",
+  "Loan term" : "Loan term",
+  "Years" : "Years",
+  "Month1" : "Month",
+  "Month2" : "Month",
+  "Month3" : "Month",
+  "Loan pay day" : "Loan pay day",
+  "Name" : "Name",
+  "Surname" : "Surname",
+  "Personal Code" : "Personal Code",
+  "ID type" : "ID type",
+  "Passport": "Passport",
+  "ID card" : "ID card",
+  "Driver license" : "Driver license",
+  "Another": "Another",
+  "Document number" : "Document number",
+  "Contact details" : "Contact details",
+  "Country" : "Country",
+  "City" : "City",
+  "Address" : "Address" ,
+  "Phone" : "Phone number1",
+  "Phone2" : "Phone number2",
+  "Email" : "E.mail",
+  "Salary" : "Salary"
+
 }
