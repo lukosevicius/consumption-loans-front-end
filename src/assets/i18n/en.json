@@ -31,6 +31,30 @@
   "Person": "User",
   "Status": "Status",
   "Date" : "Date",
-  "Name of customers" : "Consumption loan"
+  "Name of customers" : "Consumption loan",
+
+  "Loan": "Desired amount",
+  "loan title": "Loan information",
+  "loaners1": "I will take a loan",
+  "loaners2": "Alone ",
+  "loaners3": "With spouse(joint debtor)",
+  "spouse" : "Your spouse monthly earnings",
+  "earnings1": "Information about your earnings",
+  "earnings2": "Your monthly income",
+  "claculate" : "Calculate",
+  "addictionally": "You will have to pay anualy :",
+  "err": "lack of income",
+  "PaymentMonth" : "Payment per month for 5 years",
+  "EURmo" : "Eur/month",
+  "Calc": "Calculator",
+  "Draf" : "Drafts",
+  "Admin" : "Admin",
+  "Check" : "Check",
+
+  "AddCod":"Enter code",
+  "CheckS" : "Check status",
+  "LoanbyCode" : "Check loan status",
+  "Drafthead": "Customers who have uncompleted drafts"
+
 
 }

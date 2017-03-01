@@ -31,7 +31,30 @@
   "Person": "Vartotojas",
   "Status": "Statusas",
   "Date" : "Data",
-  "Name of customers" : "Vartojimo paskolos"
+  "Name of customers" : "Vartojimo paskolos",
+
+  "Loan": "Pageidaujama suma",
+  "loan title": "Informacija apie jūsų pageidaujamą paskolą",
+  "loaners1": "Paskolą imsiu",
+  "loaners2": "Vienas ",
+  "loaners3": "Su sutuoktiniu(Bednraskoliu)",
+  "spouse" : "Sutuoktino (bendraskolio) mėnesines pajamos",
+  "earnings1": "Informacija apie jūsų pajamas",
+  "earnings2": "Jūsų grynosios mėnesio pajamos",
+  "claculate" : "Skaičiuoti",
+  "addictionally": "Jūs papildomai bankui sumokėsite per 5 metus:",
+  "err": "Pagal jūsų pasirinktus duomenis, mes negalime jum susteikti paskolos",
+  "PaymentMonth" : "Mėnesinė įmoka 5 metam",
+  "EURmo" : "Eur/mėn",
+  "Calc": "Skaičiuoklė",
+  "Draf" : "Juodraščiai",
+  "Admin" : "Adminas",
+  "Check" : "Pasitikrinti",
+
+  "AddCod":"Įveskite kodą",
+  "CheckS" : "Tikrinti statusą",
+  "LoanbyCode" : "Paskolos statuso peržiūra pagal kodą",
+  "Drafthead": "Vartotojai, kurie nepabaigė pildyti paraišką"
 
 
 
