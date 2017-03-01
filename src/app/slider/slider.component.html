@@ -1,43 +1,56 @@
 <div class="container">
   <h4><b>{{'loan title' | translate}}</b></h4>
   <label class="col-xs-2">{{'Loan' | translate}}</label>
-  <input type="range" [(ngModel)]="income1" class="col-xs-8"
+  <input type="range" [(ngModel)]="loanValue" class="col-xs-8"
          showTicks="true" max="20000" min="500" id="a1" step="1" thumbLabel="true">
 
-  <input [(ngModel)]="income1" class="digits col-xs-1">
+  <input [(ngModel)]="loanValue" class="digits col-xs-1">
   <label class="col-xs-1">EUR</label>
   <label class="col-xs-5" style="text-align: right">{{'loaners1' | translate}}</label>
   <div class="col-xs-4">
     <input type="radio" name="take1" [(ngModel)]="ifAlone" checked>{{'loaners2' | translate}}
-    <input type="radio" name="take1" [(ngModel)]="ifAlone" value="true">{{'loaners3' | translate}})
+    <input type="radio" name="take1" [(ngModel)]="ifAlone" value="true">{{'loaners3' | translate}}
   </div>
   <label col-xs-3></label>
   <div *ngIf="ifAlone">
     <label class="col-xs-12"> </label>
     <label class="col-xs-3">{{'spouse' | translate}}</label>
-    <input type="range" [(ngModel)]="income3" class="col-xs-7"
+    <input type="range" [(ngModel)]="deptorsValue" class="col-xs-7"
            showTicks="true" max="20000" id="a2" min="245" step="1" thumbLabel="true">
-    <input [(ngModel)]="income3" class="digits col-xs-1">
+    <input [(ngModel)]="deptorsValue" class="digits col-xs-1">
     <label class="col-xs-1">{{'EURmo' | translate}}</label>
   </div>
   <label style="color:grey" class="col-xs-12"><hr /></label>
   <h4 class="col-xs-12"><b>{{'earnings1' | translate}}</b></h4>
   <label class="col-xs-3">{{'earnings2' | translate}}</label>
-  <input  type="range" [(ngModel)]="income2" class="col-xs-7"
+  <input  type="range" [(ngModel)]="incomeValue" class="col-xs-7"
           showTicks="true" max="8000" id="a3" min="245" step="1" thumbLabel="true">
-  <input [(ngModel)]="income2" class="digits col-xs-1">
+  <input [(ngModel)]="incomeValue" class="digits col-xs-1">
   <label class="col-xs-1">{{'EURmo' | translate}}</label>
   <div class="col-xs-12">
-    <button type="submit"  class="btn btn-primary" (click)="sudet(income1,income2,income3)">{{'calculate' | translate}}</button>
+    <button type="submit"  class="btn btn-primary" (click)="showValue()">{{'claculate' | translate}}</button>
   </div>
-  <p class="col-xs-4" *ngIf="errors"><b>{{'err' | translate}}</b></p>
-  <div *ngIf="!errors">
-    <div *ngIf="isValid">
-      <label class="col-xs-4" style="text-align: right">{{'addictionally' | translate}}</label>
-      <label class="col-xs-1">{{this.result | currency :'EUR' :true:'1.2-2' }}</label>
-      <label class="col-xs-4"  style="text-align: right">{{'PaymentMonth' | translate}}:</label>
-      <label class="col-xs-1">{{this.result1 | currency :'EUR' :true:'1.2-2' }}</label>
-      <label class="col-xs-3"></label>
-    </div>
+  <div *ngIf="valida">
+    <table class="table">
+      <thead class="thead-inverse">
+      <tr>
+        <th>{{'Monthc' | translate}}</th>
+        <th>{{'AmountLeft' | translate}}</th>
+        <th>{{'paymentMON' | translate}}</th>
+        <th>{{'LoanInc' | translate}}</th>
+        <th>{{'ContracPay' | translate}}</th>
+      </tr>
+      </thead>
+      <tbody align="center" style="">
+      <tr *ngFor="let payment of list"
+          [class.selected]="payment === selectedPayment">
+        <td>{{payment.monthNumber}}</td>
+        <td>{{payment.remainingAmount|currency:'EUR':true:'1.2-2'}}</td>
+        <td>{{payment.monthlyPay|currency:'EUR':true:'1.2-2'}}</td>
+        <td>{{payment.monthlyInt|currency:'EUR':true:'1.2-2'}}</td>
+        <td>{{payment.contractFee|currency:'EUR':true:'1.2-2'}}</td>
+      </tr>
+      </tbody>
+    </table>
   </div>
 </div>

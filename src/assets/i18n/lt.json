@@ -54,7 +54,13 @@
   "AddCod":"Įveskite kodą",
   "CheckS" : "Tikrinti statusą",
   "LoanbyCode" : "Paskolos statuso peržiūra pagal kodą",
-  "Drafthead": "Vartotojai, kurie nepabaigė pildyti paraišką"
+  "Drafthead": "Vartotojai, kurie nepabaigė pildyti paraišką",
+  "Monthc" : "Mėnesis",
+  "AmountLeft" : "Likusi suma",
+  "paymentMON" : "Mėnesinis mokėstis(įtrauktas 0,70 EUR mėnesinis paslaugų mokėstis)",
+  "LoanInc" : "Mokėtinos palūkanos",
+  "ContractPay" : "Sutarties mokėstis"
+
 
 
 
