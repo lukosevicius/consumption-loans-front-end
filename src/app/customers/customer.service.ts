@@ -19,7 +19,7 @@ export class CustomerService {
 
   private customersUrl = 'api/customers';
   private mydbUrl = 'http://localhost:8080/customers';
-  private beanloanUrl = 'https://whispering-dusk-13025.herokuapp.com/loan/get/all/';
+  private beanloanUrl = 'https://bank-loans-project.herokuapp.com/loan/get/all/';
   private beanloanGetIDUrl = 'http://localhost:8080/loan';
 
 
