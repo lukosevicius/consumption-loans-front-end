@@ -25,6 +25,12 @@
   "Phone" : "Phone number1",
   "Phone2" : "Phone number2",
   "Email" : "E.mail",
-  "Salary" : "Salary"
+  "Salary" : "Salary",
+
+  "Size2" : "Amount",
+  "Person": "User",
+  "Status": "Status",
+  "Date" : "Date",
+  "Name of customers" : "Consumption loan"
 
 }
