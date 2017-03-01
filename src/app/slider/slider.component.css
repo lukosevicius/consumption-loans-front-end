@@ -1,6 +1,12 @@
 .container{
-  color: #f5871f;
-  text-align: center;
+  border-top:double;
+  border-left: double;
+  border-bottom: double;
+  border-right:double;
+  border-top-left-radius: .4cm;
+  border-top-right-radius: .4cm;
+  border-bottom-left-radius: .4cm;
+  border-bottom-right-radius: .4cm;
 }
 .md-slider-horizontal {
   width:100%;
