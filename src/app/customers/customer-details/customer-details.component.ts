@@ -33,6 +33,7 @@ export class CustomerDetailsComponent implements OnInit {
   ){}
 
   ngOnInit(): void{
+        console.log("ngOnit suveike");
         this.route.params
             .switchMap((params: Params) => this.customerService.getCustomer(+params['id']))
             .subscribe(customer => this.customer = customer);

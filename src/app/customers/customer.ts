@@ -6,6 +6,8 @@ export class Customer {
   doc_type: number;
   doc_code: number;
   country: string;
+  city:string;
+  address: string;
   phone_number: number;
   email: string;
   salary: number;
