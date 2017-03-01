@@ -27,11 +27,13 @@
 
     <br>
     <br>
-    <!--<div *ngIf="customer.draft == true">-->
     <button (click)="goBack()">Back</button>
-    <!--</div>-->
 
-    <button (click)="save()">Save</button>
+    <div *ngIf = "customer.status == 'Atmesta' || customer.status == 'Patvirtinta' || customer.status == 'Nepatikrinta'">
+        <button (click)="save()">Save</button>
+    </div>
+
+
 
 </div>
 </div>

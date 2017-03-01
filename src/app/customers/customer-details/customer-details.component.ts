@@ -18,13 +18,13 @@ export class CustomerDetailsComponent implements OnInit {
   @Input()
   customer: Customer;
 
-  acceptLoan() {
-    this.customer.status = "patvirtina"
-  }
+  // acceptLoan() {
+  //   this.customer.status = "patvirtina"
+  // }
 
-  declineLoan() {
-    this.customer.status = "atmesta"
-  }
+  // declineLoan() {
+  //   this.customer.status = "atmesta"
+  // }
 
   constructor(
       private customerService: CustomerService,
@@ -44,9 +44,18 @@ export class CustomerDetailsComponent implements OnInit {
     this.location.back();
   }
 
-  save(): void {
-    this.customerService.update(this.customer)
-        .then(() => this.goBack());
+  acceptLoan(): void {
+    this.customer.status = "Patvirtina"
+
+    this.customerService.updateAccept(this.customer);
+       // .then(() => this.goBack());
+  }
+
+  declineLoan(): void {
+    this.customer.status = "Atmesta"
+
+    this.customerService.updateAccept(this.customer);
+    // .then(() => this.goBack());
   }
 
 
