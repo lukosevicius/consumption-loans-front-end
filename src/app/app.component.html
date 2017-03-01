@@ -9,6 +9,9 @@
       <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" routerLink="/slider">Skaicuokle</a></li>
       <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" routerLink="/admin">Customers</a></li>
       <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" routerLink="/check">check</a></li>
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown"><select #langSelect (change)="translate.use(langSelect.value)">
+        <option *ngFor="let lang of translate.getLangs()" [value]="lang" [selected]="lang === translate.currentLang">{{ lang }}</option>
+      </select></a></li>
     </ul>
   </div>
 </nav>
