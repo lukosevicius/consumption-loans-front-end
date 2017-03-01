@@ -1,0 +1,56 @@
+<div class="panel panel-default">
+    <div class="panel-heading"><h1 style="text-align:center">Vartojimo paskolos</h1></div>
+
+
+  <table class="table table-striped" >
+    <thead class="thead-inverse">
+    <tr>
+      <th >Suma</th>
+      <th>Vartotojas</th>
+      <th>Statusas</th>
+      <th>Data</th>
+
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr *ngFor="let customer of customers"
+        [class.selected]="customer === selectedCustomer"
+        (click) = "onSelect(customer)"
+        >
+      <td  *ngIf = "customer.status == 'Atmesta' || customer.status == 'Patvirtinta' || customer.status == 'Nepatikrinta'">
+        €{{customer.amount}}
+      </td>
+      <td *ngIf = "customer.status == 'Atmesta' || customer.status == 'Patvirtinta' || customer.status == 'Nepatikrinta'">
+        {{customer.name}} {{customer.surname}}
+      </td>
+      <td   *ngIf = "customer.status == 'Atmesta' || customer.status == 'Patvirtinta' || customer.status == 'Nepatikrinta'">
+        {{customer.status}}
+      </td>
+      <td   *ngIf = "customer.status == 'Atmesta' || customer.status == 'Patvirtinta' || customer.status == 'Nepatikrinta'">
+        {{customer.date |date:'MM/dd/yyyy'}}
+        <!--{{customer.date.toDateString()}}-->
+      </td>
+    </tr>
+
+    </tbody>
+  </table>
+</div>
+
+<div *ngIf = "selectedCustomer">
+  <h2>
+    {{selectedCustomer.name | uppercase}}, statusas: {{selectedCustomer.status}}
+  </h2>
+  <button (click)="gotoDetail()">Peržiūrėti</button>
+</div>
+
+
+<!--<customer-details [customer]="selectedCustomer"></customer-details>-->
+
+
+
+
+<!--<br>-->
+<!--<div class="panel panel-default" >-->
+<!--<div class="panel-footer"><h1 style="text-align:center"></h1></div>-->
+<!--</div>-->

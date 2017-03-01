@@ -1,0 +1,17 @@
+<label>Iveskite koda:</label>
+<input class="form-field-narrow"  id="loan_code"  #loan_code>
+
+
+<button type="submit" class="btn btn-default"   (click)="checkLoanCode(loan_code.value)">
+  Tikrinti statusą
+</button>
+
+<p *ngFor="let customer of customers">
+  <span *ngIf="buttonClicked == 'true' " >
+
+      <span style="font-size:300%;" *ngIf="customer.loanCode == neededLoanCode ">{{customer.name}} {{customer.surname}}, Statusas: {{customer.status}}</span>
+
+  </span>
+</p>
+
+

@@ -1,0 +1,42 @@
+<h4><b>Informacija apie jūsų pageidaujamą paskolą</b></h4>
+<label class="col-xs-2">Pageidaujama suma</label>
+<input type="range" [(ngModel)]="income1" class="col-xs-8"
+           showTicks="true" max="20000" min="500" id="a1" step="1" thumbLabel="true">
+
+<input [(ngModel)]="income1" class="digits col-xs-1">
+<label class="col-xs-1">EUR</label>
+<label class="col-xs-5" style="text-align: right">Paskolą imsiu</label>
+<div class="col-xs-4">
+  <input type="radio" name="take1" [(ngModel)]="ifAlone" checked>Vienas
+  <input type="radio" name="take1" [(ngModel)]="ifAlone" value="true">Su sutuoktiniu(Bednraskoliu)
+</div>
+<label col-xs-3></label>
+<div *ngIf="ifAlone">
+  <label class="col-xs-12"> </label>
+  <label class="col-xs-3">Sutuoktino (bendraskolio) mėnesines pajamos</label>
+  <input type="range" [(ngModel)]="income3" class="col-xs-7"
+             showTicks="true" max="20000" id="a2" min="245" step="1" thumbLabel="true">
+  <input [(ngModel)]="income3" class="digits col-xs-1">
+  <label class="col-xs-1">EUR/mėn</label>
+</div>
+<label style="color:grey" class="col-xs-12"><hr /></label>
+<h4 class="col-xs-12"><b>Informacija apie jūsų pajmas</b></h4>
+<label class="col-xs-3">Jūsų grynosios mėnesio pajamos</label>
+<input  type="range" [(ngModel)]="income2" class="col-xs-7"
+           showTicks="true" max="8000" id="a3" min="245" step="1" thumbLabel="true">
+<input [(ngModel)]="income2" class="digits col-xs-1">
+<label class="col-xs-1">EUR/mėn</label>
+<!--<md-slider min="50" max="15000"></md-slider>-->
+<div class="col-xs-12">
+  <button type="submit"  class="btn btn-primary" (click)="sudet(income1,income2,income3)">Skaičiuoti</button>
+</div>1
+<p class="col-xs-4" *ngIf="errors"><b>Palei jūsų pasirinktus duomenis, mes negalime jum susteikti paskolos</b></p>
+<div *ngIf="!errors">
+  <div *ngIf="isValid">
+    <label class="col-xs-4" style="text-align: right">Jūs papildomai bankui sumokėsite per 5 metus:</label>
+    <label class="col-xs-1">{{this.result | currency :'EUR' :true:'1.2-2' }}</label>
+    <label class="col-xs-3"  style="text-align: right">Mėnesinė įmoka 5 metam:</label>
+    <label class="col-xs-1">{{this.result1 | currency :'EUR' :true:'1.2-2' }}</label>
+    <label class="col-xs-3"></label>
+  </div>
+</div>

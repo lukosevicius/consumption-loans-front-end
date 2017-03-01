@@ -1,0 +1,23 @@
+.container{
+  background-color: lightgrey;
+  border-top:double;
+  border-left: double;
+  border-bottom: double;
+  border-right:double;
+  border-top-left-radius: 1cm;
+  border-top-right-radius: 1cm;
+  border-bottom-left-radius: 1cm;
+  border-bottom-right-radius: 1cm;
+  border-color: #f5871f;
+}
+hr {
+  -moz-border-bottom-colors: none;
+  -moz-border-image: none;
+  -moz-border-left-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-top-colors: none;
+  border-color: grey;
+  border-style: solid none;
+  border-width: 1px 0;
+  margin: 18px 0;
+}

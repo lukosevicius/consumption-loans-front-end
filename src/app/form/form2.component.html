@@ -1,0 +1,976 @@
+<body class="container">
+<form class="form-horizontal" data-toggle="validator" role="form">
+    <div style="padding-top:0.5cm" >
+        <button type="submit" class="btn btn-primary">Patvirtinti</button>
+        <button type="submit" class="btn btn-default"   (click)="submitLoanApplication(
+               name.value,
+               surname.value,
+               personal_code.value,
+               doc_type.value,
+               doc_code.value,
+               country.value,
+               city.value,
+               address.value,
+               phone_number.value,
+               email.value,
+               amount.value,
+               salary.value,
+               term.value,
+               payment_day.value
+
+               )">
+            Save
+        </button>
+    </div>
+    <br>
+
+    <div class="form-group">
+        <label  class="control-label col-md-5" style="text-align: right">Paskolos suma:*</label>
+        <div class="col-md-2">
+            <input type="number" class="form-control" id="amount" #amount >
+        </div>
+    </div>
+    <!--<div class="row">
+  
+      <div class="col-xs-1">
+        <div class="form-inline">-->
+    <label class="control-label col-md-5">Paskolos terminas:*</label>
+    <div class="form-inline">
+        <div class="col-md-1">
+            <select class="form-control" id="term" #term >
+                <option value="1">1 metai</option>
+                <option value="2">2 metai</option>
+                <option value="3">3 metai</option>
+                <option value="4">4 metai</option>
+                <option value="5">5 metai</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-2">
+            <select class="form-control" id="selectLoanMonth" >
+                <option value="1">1 mėnesis</option>
+                <option value="2">2 mėnesiai</option>
+                <option value="3">3 mėnesiai</option>
+                <option value="4">4 mėnesiai</option>
+                <option value="5">5 mėnesiai</option>
+                <option value="6">6 mėnesiai</option>
+                <option value="7">7 mėnesiai</option>
+                <option value="8">8 mėnesiai</option>
+                <option value="9">9 mėnesiai</option>
+                <option value="10">10 mėnesių</option>
+                <option value="11">11 mėnesių</option>
+                <option value="12">12 mėnesių</option>
+            </select>
+        </div>
+    </div>
+    <div class="form-group">
+        <label  class="control-label col-md-5">Paskolos ir palūknų mokėjimo diena:*</label>
+        <div class="col-md-2">
+            <select class="form-control" id="payment_day" #payment_day >
+                <option value="3">3</option>
+                <option value="7">7</option>
+                <option value="12">12</option>
+                <option value="17">17</option>
+                <option value="22">22</option>
+                <option value="27">27</option>
+            </select>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="name" class="control-label col-md-5">Vardas:*</label>
+        <div class="col-md-2">
+            <input type="text" class="form-control" id="name" #name >
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="surname" class="control-label col-md-5">Pavardė:*</label>
+        <div class="col-md-2">
+            <input type="text" class="form-control" id="surname" #surname >
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-md-5">Asmens kodas:*</label>
+        <div class="col-md-2">
+            <input type="number" class="form-control" id="personal_code"  #personal_code >
+        </div>
+    </div>
+    <div class="form-group">
+        <label  class="control-label col-md-5">Asmens dokumento tipas:*</label>
+        <div class="col-md-3">
+            <select class="form-control" id="doc_type" #doc_type >
+
+                <option value="1">Pasas</option>
+
+                <option value="1">Asmens tapatybės kortelė</option>
+
+                <option value="1">Vairuotojo pažymėjimas</option>
+
+                <option value="4">Tarnybinis pasas</option>
+
+                <option value="5">Diplomatinis pasas</option>
+
+                <option value="6">Užsieniečio pasas</option>
+
+                <option value="7">Migracijos tarnybos pasas</option>
+
+                <option value="8">Kita</option>
+            </select>
+        </div>
+    </div>
+    <div class="form-group">
+        <label  class="control-label col-md-5">Dokumento numeris:*</label>
+        <div class="col-md-2">
+            <input type="number" class="form-control" id="doc_code" #doc_code >
+        </div>
+    </div>
+    <hr />
+    <h4><b>Kontaktinai duomenys</b></h4>
+    <div class="form-group">
+        <label  class="control-label col-md-5">Šalis:*</label>
+        <div class="col-md-3">
+            <select class="form-control" id="country" #country >
+                <option value="AF">AFGHANISTAN</option>
+
+                <option value="AX"><span class="flag-icon flag-icon-gr">ALAND ISLANDS</span></option>
+
+                <option value="AL" data-countries="AL">ALBANIA</option>
+
+                <option value="DZ">ALGERIA</option>
+
+                <option value="AS">AMERICAN SAMOA</option>
+
+                <option value="AD">ANDORRA</option>
+
+                <option value="AO">ANGOLA</option>
+
+                <option value="AI">ANGUILLA</option>
+
+                <option value="AQ">ANTARCTICA</option>
+
+                <option value="AG">ANTIGUA AND BARBUDA</option>
+
+                <option value="AR">ARGENTINA</option>
+
+                <option value="AM">ARMENIA</option>
+
+                <option value="AW">ARUBA</option>
+
+                <option value="AU">AUSTRALIA</option>
+
+                <option value="AT">AUSTRIA</option>
+
+                <option value="AZ">AZERBAIJAN</option>
+
+                <option value="BS">BAHAMAS</option>
+
+                <option value="BH">BAHRAIN</option>
+
+                <option value="BD">BANGLADESH</option>
+
+                <option value="BB">BARBADOS</option>
+
+                <option value="BY">BELARUS</option>
+
+                <option value="BE">BELGIUM</option>
+
+                <option value="BZ">BELIZE</option>
+
+                <option value="BJ">BENIN</option>
+
+                <option value="BM">BERMUDA</option>
+
+                <option value="BT">BHUTAN</option>
+
+                <option value="BO">BOLIVIA</option>
+
+                <option value="BQ">BONAIRE, SAINT EUSTATIUS and SABA</option>
+
+                <option value="BA">BOSNIA AND HERZEGOVINA</option>
+
+                <option value="BW">BOTSWANA</option>
+
+                <option value="BV">BOUVET ISLAND</option>
+
+                <option value="BR">BRAZIL</option>
+
+                <option value="IO">BRITISH INDIAN OCEAN TERRITORY</option>
+
+                <option value="BN">BRUNEI DARUSSALAM</option>
+
+                <option value="BG">BULGARIA</option>
+
+                <option value="BF">BURKINA FASO</option>
+
+                <option value="BI">BURUNDI</option>
+
+                <option value="KH">CAMBODIA</option>
+
+                <option value="CM">CAMEROON</option>
+
+                <option value="CA">CANADA</option>
+
+                <option value="CV">CAPE VERDE</option>
+
+                <option value="KY">CAYMAN ISLANDS</option>
+
+                <option value="CF">CENTRAL AFRICAN REPUBLIC</option>
+
+                <option value="TD">CHAD</option>
+
+                <option value="CL">CHILE</option>
+
+                <option value="CN">CHINA</option>
+
+                <option value="CX">CHRISTMAS ISLAND</option>
+
+                <option value="CC">COCOS (KEELING) ISLANDS</option>
+
+                <option value="CO">COLOMBIA</option>
+
+                <option value="KM">COMOROS</option>
+
+                <option value="CG">CONGO</option>
+
+                <option value="CD">CONGO, THE DEMOCRATIC REPUBLIC OF THE</option>
+
+                <option value="CK">COOK ISLANDS</option>
+
+                <option value="CR">COSTA RICA</option>
+
+                <option value="CI">COTE D'IVOIRE</option>
+
+                <option value="HR">CROATIA</option>
+
+                <option value="CU">CUBA</option>
+
+                <option value="CW">CURACAO</option>
+
+                <option value="CY">CYPRUS</option>
+
+                <option value="CZ">CZECH REPUBLIC</option>
+
+                <option value="DK">DENMARK</option>
+
+                <option value="DJ">DJIBOUTI</option>
+
+                <option value="DM">DOMINICA</option>
+
+                <option value="DO">DOMINICAN REPUBLIC</option>
+
+                <option value="EC">ECUADOR</option>
+
+                <option value="EG">EGYPT</option>
+
+                <option value="SV">EL SALVADOR</option>
+
+                <option value="GQ">EQUATORIAL GUINEA</option>
+
+                <option value="ER">ERITREA</option>
+
+                <option value="EE">ESTONIA</option>
+
+                <option value="ET">ETHIOPIA</option>
+
+                <option value="FO">FAEROE ISLANDS</option>
+
+                <option value="FK">FALKLAND ISLANDS (MALVINAS)</option>
+
+                <option value="FJ">FIJI</option>
+
+                <option value="FI">FINLAND</option>
+
+                <option value="FR">FRANCE</option>
+
+                <option value="GF">FRENCH GUIANA</option>
+
+                <option value="PF">FRENCH POLYNESIA</option>
+
+                <option value="TF">FRENCH SOUTHERN TERRITORIES</option>
+
+                <option value="GA">GABON</option>
+
+                <option value="GM">GAMBIA</option>
+
+                <option value="GE">GEORGIA</option>
+
+                <option value="DE">GERMANY</option>
+
+                <option value="GH">GHANA</option>
+
+                <option value="GI">GIBRALTAR</option>
+
+                <option value="GR">GREECE</option>
+
+                <option value="GL">GREENLAND</option>
+
+                <option value="GD">GRENADA</option>
+
+                <option value="GP">GUADELOUPE</option>
+
+                <option value="GU">GUAM</option>
+
+                <option value="GT">GUATEMALA</option>
+
+                <option value="GG">GUERNSEY, C.I.</option>
+
+                <option value="GN">GUINEA</option>
+
+                <option value="GW">GUINEA-BISSAU</option>
+
+                <option value="GY">GUYANA</option>
+
+                <option value="HT">HAITI</option>
+
+                <option value="HM">HEARD ISLAND AND MCDONALD ISLANDS</option>
+
+                <option value="VA">HOLY SEE (VATICAN CITY STATE)</option>
+
+                <option value="HN">HONDURAS</option>
+
+                <option value="HK">HONG KONG</option>
+
+                <option value="HU">HUNGARY</option>
+
+                <option value="IS">ICELAND</option>
+
+                <option value="IN">INDIA</option>
+
+                <option value="ID">INDONESIA</option>
+
+                <option value="IR">IRAN, ISLAMIC REPUBLIC OF</option>
+
+                <option value="IQ">IRAQ</option>
+
+                <option value="IE">IRELAND</option>
+
+                <option value="IM">ISLE OF MAN</option>
+
+                <option value="IL">ISRAEL</option>
+
+                <option value="IT">ITALY</option>
+
+                <option value="JM">JAMAICA</option>
+
+                <option value="JP">JAPAN</option>
+
+                <option value="JE">JERSEY</option>
+
+                <option value="JO">JORDAN</option>
+
+                <option value="KZ">KAZAKHSTAN</option>
+
+                <option value="KE">KENYA</option>
+
+                <option value="KI">KIRIBATI</option>
+
+                <option value="KP">KOREA, DEMOCRATIC PEOPLE'S REPUBLIC OF</option>
+
+                <option value="KR">KOREA, REPUBLIC OF</option>
+
+                <option value="KS">KOSOVO</option>
+
+                <option value="KW">KUWAIT</option>
+
+                <option value="KG">KYRGYZSTAN</option>
+
+                <option value="LA">LAO PEOPLE'S DEMOCRATIC REPUBLIC</option>
+
+                <option value="LV">LATVIA</option>
+
+                <option value="LB">LEBANON</option>
+
+                <option value="LS">LESOTHO</option>
+
+                <option value="LR">LIBERIA</option>
+
+                <option value="LY">LIBYA</option>
+
+                <option value="LI">LIECHTENSTEIN</option>
+
+                <option selected value="LT">LIETUVA</option>
+
+                <option value="LU">LUXEMBOURG</option>
+
+                <option value="MO">MACAO</option>
+
+                <option value="MK">MACEDONIA,THE FORMER YUGOSLAV REPUBL. OF</option>
+
+                <option value="MG">MADAGASCAR</option>
+
+                <option value="MW">MALAWI</option>
+
+                <option value="MY">MALAYSIA</option>
+
+                <option value="MV">MALDIVES</option>
+
+                <option value="ML">MALI</option>
+
+                <option value="MT">MALTA</option>
+
+                <option value="MH">MARSHALL ISLANDS</option>
+
+                <option value="MQ">MARTINIQUE</option>
+
+                <option value="MR">MAURITANIA</option>
+
+                <option value="MU">MAURITIUS</option>
+
+                <option value="YT">MAYOTTE</option>
+
+                <option value="MX">MEXICO</option>
+
+                <option value="FM">MICRONESIA, FEDERATED STATES OF</option>
+
+                <option value="MD">MOLDOVA</option>
+
+                <option value="MC">MONACO</option>
+
+                <option value="MN">MONGOLIA</option>
+
+                <option value="ME">MONTENEGRO</option>
+
+                <option value="MS">MONTSERRAT</option>
+
+                <option value="MA">MOROCCO</option>
+
+                <option value="MZ">MOZAMBIQUE</option>
+
+                <option value="MM">MYANMAR</option>
+
+                <option value="NA">NAMIBIA</option>
+
+                <option value="NR">NAURU</option>
+
+                <option value="NP">NEPAL</option>
+
+                <option value="NL">NETHERLANDS</option>
+
+                <option value="NC">NEW CALEDONIA</option>
+
+                <option value="NZ">NEW ZEALAND</option>
+
+                <option value="NI">NICARAGUA</option>
+
+                <option value="NE">NIGER</option>
+
+                <option value="NG">NIGERIA</option>
+
+                <option value="NU">NIUE</option>
+
+                <option value="NF">NORFOLK ISLAND</option>
+
+                <option value="MP">NORTHERN MARIANA ISLANDS</option>
+
+                <option value="NO">NORWAY</option>
+
+                <option value="OM">OMAN</option>
+
+                <option value="PK">PAKISTAN</option>
+
+                <option value="PW">PALAU</option>
+
+                <option value="PS">PALESTINIAN TERRITORY, OCCUPIED</option>
+
+                <option value="PA">PANAMA</option>
+
+                <option value="PG">PAPUA NEW GUINEA</option>
+
+                <option value="PY">PARAGUAY</option>
+
+                <option value="PE">PERU</option>
+
+                <option value="PH">PHILIPPINES</option>
+
+                <option value="PN">PITCAIRN</option>
+
+                <option value="PL">POLAND</option>
+
+                <option value="PT">PORTUGAL</option>
+
+                <option value="PR">PUERTO RICO</option>
+
+                <option value="QA">QATAR</option>
+
+                <option value="RE">REUNION</option>
+
+                <option value="RO">ROMANIA</option>
+
+                <option value="RU">RUSSIAN FEDERATION</option>
+
+                <option value="RW">RWANDA</option>
+
+                <option value="BL">SAINT BARTHELEMY</option>
+
+                <option value="SH">SAINT HELENA</option>
+
+                <option value="KN">SAINT KITTS AND NEVIS</option>
+
+                <option value="LC">SAINT LUCIA</option>
+
+                <option value="SX">SAINT MAARTEN(DUTCH PART)</option>
+
+                <option value="MF">SAINT MARTIN</option>
+
+                <option value="PM">SAINT PIERRE AND MIQUELON</option>
+
+                <option value="VC">SAINT VINCENT AND THE GRENADINES</option>
+
+                <option value="WS">SAMOA</option>
+
+                <option value="SM">SAN MARINO</option>
+
+                <option value="ST">SAO TOME AND PRINCIPE</option>
+
+                <option value="SA">SAUDI ARABIA</option>
+
+                <option value="SN">SENEGAL</option>
+
+                <option value="RS">SERBIA</option>
+
+                <option value="SC">SEYCHELLES</option>
+
+                <option value="SL">SIERRA LEONE</option>
+
+                <option value="SG">SINGAPORE</option>
+
+                <option value="SK">SLOVAKIA</option>
+
+                <option value="SI">SLOVENIA</option>
+
+                <option value="SB">SOLOMON ISLANDS</option>
+
+                <option value="SO">SOMALIA</option>
+
+                <option value="ZA">SOUTH AFRICA</option>
+
+                <option value="GS">SOUTH GEORGIA AND THE SOUTH SANDWICH ISLANDS</option>
+
+                <option value="SS">SOUTH SUDAN,REPUBLIC OF</option>
+
+                <option value="ES">SPAIN</option>
+
+                <option value="LK">SRI LANKA</option>
+
+                <option value="SD">SUDAN</option>
+
+                <option value="SR">SURINAME</option>
+
+                <option value="SJ">SVALBARD AND JAN MAYEN</option>
+
+                <option value="SZ">SWAZILAND</option>
+
+                <option value="SE">SWEDEN</option>
+
+                <option value="CH">SWITZERLAND</option>
+
+                <option value="SY">SYRIAN ARAB REPUBLIC</option>
+
+                <option value="TW">TAIWAN, PROVINCE OF CHINA</option>
+
+                <option value="TJ">TAJIKISTAN</option>
+
+                <option value="TZ">TANZANIA, UNITED REPUBLIC OF</option>
+
+                <option value="TH">THAILAND</option>
+
+                <option value="TL">TIMOR-LESTE</option>
+
+                <option value="TG">TOGO</option>
+
+                <option value="TK">TOKELAU</option>
+
+                <option value="TO">TONGA</option>
+
+                <option value="TT">TRINIDAD AND TOBAGO</option>
+
+                <option value="TN">TUNISIA</option>
+
+                <option value="TR">TURKEY</option>
+
+                <option value="TM">TURKMENISTAN</option>
+
+                <option value="TC">TURKS AND CAICOS ISLANDS</option>
+
+                <option value="TV">TUVALU</option>
+
+                <option value="UG">UGANDA</option>
+
+                <option value="UA">UKRAINE</option>
+
+                <option value="AE">UNITED ARAB EMIRATES</option>
+
+                <option value="GB">UNITED KINGDOM</option>
+
+                <option value="US">UNITED STATES</option>
+
+                <option value="UM">UNITED STATES MINOR OUTLYING ISLANDS</option>
+
+                <option value="UY">URUGUAY</option>
+
+                <option value="UZ">UZBEKISTAN</option>
+
+                <option value="VU">VANUATU</option>
+
+                <option value="VE">VENEZUELA</option>
+
+                <option value="VN">VIET NAM</option>
+
+                <option value="VG">VIRGIN ISLANDS, BRITISH</option>
+
+                <option value="VI">VIRGIN ISLANDS, U.S.</option>
+
+                <option value="WF">WALLIS AND FUTUNA</option>
+
+                <option value="EH">WESTERN SAHARA</option>
+
+                <option value="YE">YEMEN</option>
+
+                <option value="ZM">ZAMBIA</option>
+
+                <option value="ZW">ZIMBABWE</option>
+            </select>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-md-5">Miestas ar apskritis:*</label>
+        <div class="col-md-3">
+            <select class="form-control" id="city" #city >
+                <option value="242">Akmenė</option>
+
+                <option value="348">Akmenės raj.</option>
+
+                <option value="277">Akmenės raj. Naujoji Akmenė</option>
+
+                <option value="279">Akmenės raj. Venta</option>
+
+                <option value="278">Akmenės raj. Viekšniai</option>
+
+                <option value="346">Alytaus raj.</option>
+
+                <option value="247">Alytaus raj. Daugai</option>
+
+                <option value="249">Alytaus raj. Simnas</option>
+
+                <option value="235">Alytus</option>
+
+                <option value="200">Anykščiai</option>
+
+                <option value="311">Anykščių raj.</option>
+
+                <option value="292">Anykščių raj. Kavarskas</option>
+
+                <option value="293">Anykščių raj. Troškūnai</option>
+
+                <option value="240">Birštonas</option>
+
+                <option value="201">Biržai</option>
+
+                <option value="312">Biržų raj.</option>
+
+                <option value="270">Biržų raj. Vabalninkas</option>
+
+                <option value="237">Druskininkai</option>
+
+                <option value="202">Ignalina</option>
+
+                <option value="313">Ignalinos raj.</option>
+
+                <option value="294">Ignalinos raj. Dūkštas</option>
+
+                <option value="204">Jonava</option>
+
+                <option value="315">Jonavos raj.</option>
+
+                <option value="314">Joniškio raj.</option>
+
+                <option value="280">Joniškio raj. Žagarė</option>
+
+                <option value="203">Joniškis</option>
+
+                <option value="205">Jurbarkas</option>
+
+                <option value="316">Jurbarko raj.</option>
+
+                <option value="287">Jurbarko raj. Smalininkai</option>
+
+                <option value="317">Kaišiadorių r.</option>
+
+                <option value="251">Kaišiadorių raj. Žiežmariai</option>
+
+                <option value="206">Kaišiadorys</option>
+
+                <option value="231">Kaunas</option>
+
+                <option value="342">Kauno raj.</option>
+
+                <option value="253">Kauno raj. Ežerėlis</option>
+
+                <option value="254">Kauno raj. Garliava</option>
+
+                <option value="255">Kauno raj. Kačerginė</option>
+
+                <option value="256">Kauno raj. Kulautuva</option>
+
+                <option value="252">Kauno raj. Vilkija</option>
+
+                <option value="207">Kelmė</option>
+
+                <option value="318">Kelmės raj.</option>
+
+                <option value="281">Kelmės raj. Tytuvėnai</option>
+
+                <option value="282">Kelmės raj. Užventis</option>
+
+                <option value="232">Klaipėda</option>
+
+                <option value="343">Klaipėdos raj.</option>
+
+                <option value="259">Klaipėdos raj. Gargždai</option>
+
+                <option value="260">Klaipėdos raj. Priekulė</option>
+
+                <option value="208">Kretinga</option>
+
+                <option value="319">Kretingos raj.</option>
+
+                <option value="261">Kretingos raj. Salantai</option>
+
+                <option value="320">Kupiškio raj.</option>
+
+                <option value="271">Kupiškio raj. Subačius</option>
+
+                <option value="209">Kupiškis</option>
+
+                <option value="246">Kėdainiai</option>
+
+                <option value="352">Kėdainių raj.</option>
+
+                <option value="210">Lazdijai</option>
+
+                <option value="321">Lazdijų raj.</option>
+
+                <option value="250">Lazdijų raj. Veisiejai</option>
+
+                <option value="236">Marijampolė</option>
+
+                <option value="347">Marijampolės r.</option>
+
+                <option value="265">Marijampolės raj. Kalvarija</option>
+
+                <option value="264">Marijampolės raj. Kazlų Rūda</option>
+
+                <option value="211">Mažeikiai</option>
+
+                <option value="322">Mažeikių raj.</option>
+
+                <option value="289">Mažeikių raj. Seda</option>
+
+                <option value="212">Molėtai</option>
+
+                <option value="323">Molėtų raj.</option>
+
+                <option value="239">Neringa</option>
+
+                <option value="213">Pakruojis</option>
+
+                <option value="324">Pakruojo raj.</option>
+
+                <option value="283">Pakruojo raj. Linkuva</option>
+
+                <option value="238">Palanga</option>
+
+                <option value="345">Panevėžio raj.</option>
+
+                <option value="272">Panevėžio raj. Ramygala</option>
+
+                <option value="234">Panevėžys</option>
+
+                <option value="325">Pasvalio raj.</option>
+
+                <option value="273">Pasvalio raj. Joniškėlis</option>
+
+                <option value="214">Pasvalys</option>
+
+                <option value="215">Plungė</option>
+
+                <option value="326">Plungės raj.</option>
+
+                <option value="290">Plungės raj. Rietavas</option>
+
+                <option value="216">Prienai</option>
+
+                <option value="327">Prienų raj.</option>
+
+                <option value="257">Prienų raj. Jieznas</option>
+
+                <option value="333">Radviliškio r.</option>
+
+                <option value="285">Radviliškio raj. Tyruliai</option>
+
+                <option value="284">Radviliškio raj. Šeduva</option>
+
+                <option value="222">Radviliškis</option>
+
+                <option value="223">Raseiniai</option>
+
+                <option value="334">Raseinių raj.</option>
+
+                <option value="258">Raseinių raj. Ariogala</option>
+
+                <option value="335">Rokiškio raj.</option>
+
+                <option value="276">Rokiškio raj. Juodupė</option>
+
+                <option value="274">Rokiškio raj. Obeliai</option>
+
+                <option value="275">Rokiškio raj. Pandėlys</option>
+
+                <option value="224">Rokiškis</option>
+
+                <option value="225">Skuodas</option>
+
+                <option value="336">Skuodo raj.</option>
+
+                <option value="199">Tauragė</option>
+
+                <option value="310">Tauragės raj.</option>
+
+                <option value="288">Tauragės raj. Skaudvilė</option>
+
+                <option value="220">Telšiai</option>
+
+                <option value="291">Telšių raj. Varniai</option>
+
+                <option value="221">Trakai</option>
+
+                <option value="332">Trakų raj.</option>
+
+                <option value="305">Trakų raj. Elektrėnai</option>
+
+                <option value="306">Trakų raj. Grigiškės</option>
+
+                <option value="303">Trakų raj. Lentvaris</option>
+
+                <option value="307">Trakų raj. Rūdiškės</option>
+
+                <option value="304">Trakų raj. Vievis</option>
+
+                <option value="228">Ukmergė</option>
+
+                <option value="339">Ukmergės raj.</option>
+
+                <option value="229">Utena</option>
+
+                <option value="340">Utenos raj.</option>
+
+                <option value="230">Varėna</option>
+
+                <option value="341">Varėnos raj.</option>
+
+                <option value="349">Vilkaviškio r.</option>
+
+                <option value="268">Vilkaviškio raj. Kybartai</option>
+
+                <option value="269">Vilkaviškio raj. Virbalis</option>
+
+                <option value="243">Vilkaviškis</option>
+
+                <option value="309">Vilniaus raj.</option>
+
+                <option value="300">Vilniaus raj. Nemenčinė</option>
+
+                <option value="198">Vilnius</option>
+
+                <option value="241">Visaginas</option>
+
+                <option value="244">Zarasai</option>
+
+                <option value="350">Zarasų raj.</option>
+
+                <option value="295">Zarasų raj. Dusetos</option>
+
+                <option value="297">Zarasų raj. Turmantas</option>
+
+                <option value="226">Šakiai</option>
+
+                <option value="337">Šakių raj.</option>
+
+                <option value="267">Šakių raj. Gelgaudiškis</option>
+
+                <option value="266">Šakių raj. Kudirkos Naumiestis</option>
+
+                <option value="227">Šalčininkai</option>
+
+                <option value="338">Šalčininkų raj.</option>
+
+                <option value="299">Šalčininkų raj. Baltoji Vokė</option>
+
+                <option value="298">Šalčininkų raj. Eišiškės</option>
+
+                <option value="233">Šiauliai</option>
+
+                <option value="344">Šiaulių raj.</option>
+
+                <option value="286">Šiaulių raj. Kuršėnai</option>
+
+                <option value="217">Šilalė</option>
+
+                <option value="328">Šilalės raj.</option>
+
+                <option value="218">Šilutė</option>
+
+                <option value="329">Šilutės raj.</option>
+
+                <option value="262">Šilutės raj. Pagėgiai</option>
+
+                <option value="263">Šilutės raj. Panemunė</option>
+
+                <option value="219">Širvintos</option>
+
+                <option value="330">Širvintų raj.</option>
+
+                <option value="351">Švenčionių r.</option>
+
+                <option value="301">Švenčionių raj. Pabradė</option>
+
+                <option value="302">Švenčionių raj. Švenčionėliai</option>
+
+                <option value="245">Švenčionys</option>
+            </select>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-md-5">Adresas:*</label>
+        <div class="col-md-3">
+            <input type="text" class="form-control" id="address" #address >
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-md-5">Telefonas 1:*</label>
+        <div class="col-md-2">
+            <input type="tel" class="form-control" id="phone_number" #phone_number >
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="telefone2" class="control-label col-md-5">Telefonas 2:</label>
+        <div class="col-md-2">
+            <input type="tel" class="form-control" id="telefone2">
+        </div>
+    </div>
+    <div class="form-group">
+        <label  class="control-label col-md-5">El.paštas:</label>
+        <div class="col-md-2">
+            <input type="email" id="email" #email class="form-control" >
+        </div>
+    </div>
+    <div class="form-inline">
+        <label  class="control-label col-md-5">Mėnesinis atlyginimas atskaičius mokesčius*</label>
+        <div class="col-md-1">
+            <input type="number" class="form-control" id="salary" #salary  >
+        </div>
+        <label class="control-label col-md-2" style="padding-bottom: 1cm">EUR</label>
+    </div>
+</form>
+</body>

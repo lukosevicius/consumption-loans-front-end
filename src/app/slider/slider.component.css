@@ -1,0 +1,52 @@
+.container{
+  color: #f5871f;
+  text-align: center;
+}
+.md-slider-horizontal {
+  width:100%;
+}
+
+#page-padding {
+  padding: 0 1.5em 1.5em 1.5em;
+}
+.hr {
+  color: #f00;
+  background-color: #f00;
+  height: 5px;
+}
+
+input.col-xs-8{
+  display: inline-block;
+  width: 60%;
+}
+
+
+.digits{
+  margin-left: 40px;
+}
+
+input.col-xs-7{
+  display: inline-block;
+  width: 60%;
+}
+
+label.col-xs-3{
+  width: 17%;
+}
+
+label.col-xs-12{
+  padding: 50px 0px;
+}
+
+h4{
+  text-align: center;
+  margin-bottom: 50px;
+}
+.col-xs-4 input{
+  margin-right: 10px;
+  margin-left: 10px;
+}
+div.col-xs-12{
+  margin-top: 50px;
+  margin-left: 50px;
+}
