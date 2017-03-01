@@ -19,8 +19,8 @@ export class CustomerService {
 
   private customersUrl = 'api/customers';
   private mydbUrl = 'http://localhost:8080/customers';
-  private beanloanUrl = 'https://whispering-dusk-13025.herokuapp.com/loan/get/all/';
-  private beanloanGetIDUrl = 'http://localhost:8080/loan';
+  private beanloanUrl = 'https://bank-loans-project.herokuapp.com/loan/get/all/';
+  private beanloanGetIDUrl = 'https://bank-loans-project.herokuapp.com/loan';
 
 
   // DUOMENU IMIMAS IS LOCAL DUOMENU BAZES
@@ -78,7 +78,7 @@ export class CustomerService {
     console.log("cj suveike");
 
     return this.http
-        .post("http://localhost:8080/loan/newjson", ({
+        .post("https://bank-loans-project.herokuapp.com/loan/newjson", ({
           name: name,
           surname: surname,
           personal_code: personal_code,

@@ -12,9 +12,6 @@ export class CheckStatusComponent implements OnInit {
 
   customers: Customer[];
   error: any;
-  neededLoanCode : string;
-  buttonClicked : string;
-
 
 
     constructor(private customerService : CustomerService, private router: Router){}
@@ -36,12 +33,15 @@ export class CheckStatusComponent implements OnInit {
 
   }
 
+  neededLoanCode : string;
+  buttonClicked : string;
+
+
+
   checkLoanCode(loan_code: string){
     this.neededLoanCode = loan_code;
     this.buttonClicked = "true";
     console.log(loan_code);
-
-
 
 
   }
