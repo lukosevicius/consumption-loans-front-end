@@ -1,9 +1,15 @@
-'<h3>Customers who have uncompleted drafts:</h3>'
 
-<div class="grid grid-pad">
-    <a *ngFor="let customer of customers" [routerLink]="['/detail', customer.id]" class="col-1-4">
-        <div class="module customer">
-            <h4>{{customer.name}} {{customer.surname}}</h4>
-        </div>
-    </a>
-</div>
+<div class="content">
+
+  <div class="#"><h3 class ="title">Customers who have uncompleted drafts:</h3><div>
+    <div class="blank"></div>
+    <div class="grid grid-pad">
+      <a *ngFor="let customer of customers" [routerLink]="['/detail', customer.id]" class="col-1-4">
+
+
+        <button type="button" class="btn btn-primary btn-block">{{customer.name}} {{customer.surname}} </button>
+
+      </a>
+
+    </div>
+  </div>
