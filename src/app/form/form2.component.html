@@ -1,8 +1,11 @@
 <body class="container">
 <form class="form-horizontal" data-toggle="validator" role="form">
 
-  <div style="padding-top:0.5cm" >
-        <button type="submit" class="btn btn-primary">{{'Valid' | translate}}</button>
+    <h1>{{message}} {{loan_code}} </h1>
+
+
+    <div style="padding-top:0.5cm" >
+        <!--<button type="submit" class="btn btn-primary">{{'Valid' | translate}}</button>-->
         <button type="submit" class="btn btn-default"   (click)="submitLoanApplication(
                name.value,
                surname.value,
@@ -981,4 +984,3 @@
 </body>
 
 
-<h1>{{message}} {{loan_code}} </h1>
