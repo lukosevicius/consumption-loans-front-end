@@ -1,11 +1,15 @@
+<div class="hello">
+  <h3>Paskolos statuso peržiūra pagal kodą</h3>
+</div>
+<div class="content">
 <label>Iveskite koda:</label>
 <input class="form-field-narrow"  id="loan_code"  #loan_code>
 
 
-<button type="submit" class="btn btn-default"   (click)="checkLoanCode(loan_code.value)">
+<button type="submit" class="btn btn-primary"   (click)="checkLoanCode(loan_code.value)">
   Tikrinti statusą
 </button>
-
+</div>
 <p *ngFor="let customer of customers">
   <span *ngIf="buttonClicked == 'true' " >
 
