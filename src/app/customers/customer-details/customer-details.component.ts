@@ -54,7 +54,7 @@ export class CustomerDetailsComponent implements OnInit {
   declineLoan(): void {
     this.customer.status = "Atmesta"
 
-    this.customerService.updateAccept(this.customer);
+    this.customerService.updateDecline(this.customer);
     // .then(() => this.goBack());
   }
 
