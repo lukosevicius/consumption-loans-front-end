@@ -16,7 +16,7 @@
     <label class="col-xs-12"> </label>
     <label class="col-xs-3">{{'spouse' | translate}}</label>
     <input type="range" [(ngModel)]="deptorsValue" class="col-xs-7"
-           showTicks="true" max="20000" id="a2" min="245" step="1" thumbLabel="true">
+           showTicks="true" max="10000" id="a2" min="245" step="1" thumbLabel="true">
     <input [(ngModel)]="deptorsValue" class="digits col-xs-1">
     <label class="col-xs-1">{{'EURmo' | translate}}</label>
   </div>
@@ -24,7 +24,7 @@
   <h4 class="col-xs-12"><b>{{'earnings1' | translate}}</b></h4>
   <label class="col-xs-3">{{'earnings2' | translate}}</label>
   <input  type="range" [(ngModel)]="incomeValue" class="col-xs-7"
-          showTicks="true" max="8000" id="a3" min="245" step="1" thumbLabel="true">
+          showTicks="true" max="10000" id="a3" min="245" step="1" thumbLabel="true">
   <input [(ngModel)]="incomeValue" class="digits col-xs-1">
   <label class="col-xs-1">{{'EURmo' | translate}}</label>
   <div class="col-xs-12">
@@ -38,7 +38,7 @@
         <th>{{'AmountLeft' | translate}}</th>
         <th>{{'paymentMON' | translate}}</th>
         <th>{{'LoanInc' | translate}}</th>
-        <th>{{'ContracPay' | translate}}</th>
+        <th>{{'ContractPay' | translate}}</th>
       </tr>
       </thead>
       <tbody align="center" style="">
@@ -54,3 +54,4 @@
     </table>
   </div>
 </div>
+

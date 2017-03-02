@@ -4,16 +4,14 @@
 <form class="form-horizontal" data-toggle="validator" role="form">
 
 
-
   <button type="submit" class="btn btn-primary" >Patvirtinti</button>
   <button type="button" class="btn btn-primary">Išsaugoti</button>
-
 
 
   <div class="form-group">
     <label for="inputLoanSize" class="control-label col-xs-2">Paskolos suma:*</label>
     <div class="col-xs-2">
-      <input type="number" class="form-control" id="inputLoanSize" required>
+      <input type="number" min="0" class="form-control" id="inputLoanSize" required>
     </div>
   </div>
   <!--<div class="row">
@@ -962,5 +960,8 @@
   <div class="form-inline">
     <label class="control-label col-xs-2">EUR</label>
   </div>
+
+
+
 </form>
 </body>

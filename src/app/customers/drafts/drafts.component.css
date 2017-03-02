@@ -4,28 +4,30 @@
 }
 
 .content {
-  text-align: center;
+  /*text-align: center;*/
   margin: auto;
   margin-top: 100px;
+  margin-bottom: 50px;
   padding: 50px 0px;
   display: block;
-  background-color: #cccccc;
+  background-color: #eeeeee;
   width: 30%;
   border-top:double;
   border-left: double;
   border-bottom: double;
   border-right:double;
-  border-top-left-radius: 1cm;
-  border-top-right-radius: 1cm;
-  border-bottom-left-radius: 1cm;
-  border-bottom-right-radius: 1cm;
-  border-color: #f5871f;
+  border-color: rgba(158, 161, 161, 0.3);
 }
 .draft-costumers{
   margin: auto;
-  text-align: center;
+  /*text-align: center;*/
+}
+.grid{
+  margin: 0% 10%;
 }
 
 
-
+.name_lastname{
+  margin: 10% 10%;
+}
 
