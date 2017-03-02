@@ -4,20 +4,20 @@
     <h1>{{'CliDom' | translate}}</h1>
 
     <div><label>{{'Name' | translate}}: </label> {{customer.name}}</div>
-    <div><label>{{'Monthc' | translate}}: </label> {{customer.surname}}</div>
+    <div><label>{{'Surname' | translate}}: </label> {{customer.surname}}</div>
     <div><label>{{'Loan size' | translate}}: </label> €{{customer.amount}}</div>
-    <div><label>{{'Salary '| translate }} :</label> €{{customer.salary}}</div>
+    <div><label>{{'Salary'| translate }} :</label> €{{customer.salary}}</div>
     <div><label>{{'Status' | translate}} :</label>{{customer.status}}</div>
     <div><label>{{'Country' | translate}}: </label>{{customer.country}}</div>
     <div><label>{{'City' | translate}}:</label>{{customer.city}}</div>
     <div><label>{{'Address' | translate}}:</label>{{customer.address}}</div>
-    <div><label>{{'Person Code' | translate}}: </label>{{customer.personal_code}}</div>
+    <div><label>{{'Personal Code' | translate}}: </label>{{customer.personal_code}}</div>
     <div><label>{{'Email' | translate}}: </label>{{customer.email}}</div>
     <div><label>{{'Phone' | translate}}: </label>{{customer.phone_number}}</div>
     <div><label>{{'Document number' | translate}}: </label>{{customer.doc_code}}</div>
 
 
-    <div><label>Kodas: </label>{{customer.loanCode}}</div>
+    <div><label>{{'Kodee' | translate}} </label>{{customer.loanCode}}</div>
 
 
     <div *ngIf = "customer.status == 'Atmesta' || customer.status == 'Patvirtinta' || customer.status == 'Nepatikrinta'">
