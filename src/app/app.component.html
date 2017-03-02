@@ -1,7 +1,7 @@
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">SwedBeam</a>
+      <a class="navbar-brand" href="#">SwedBean</a>
     </div>
     <ul class="nav navbar-nav">
       <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" routerLink="/form">{{ 'Form' | translate }}</a></li>
@@ -9,7 +9,7 @@
       <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" routerLink="/slider">{{ 'Calc' | translate}}</a></li>
       <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" routerLink="/admin">{{ 'Admin' | translate}}</a></li>
       <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" routerLink="/check">{{ 'Check' | translate}}</a></li>
-      <li class="dropdown"><select #langSelect (change)="translate.use(langSelect.value)">
+      <li class="dropdown lang"><select #langSelect (change)="translate.use(langSelect.value)">
         <option *ngFor="let lang of translate.getLangs()" [value]="lang" [selected]="lang === translate.currentLang">{{ lang }}</option>
       </select></li>
     </ul>
