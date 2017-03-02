@@ -1,20 +1,20 @@
 <body>
 <div class="container">
 <div *ngIf="customer">
-    <h1>Kliento duomenys:</h1>
+    <h1>{{'CliDom' | translate}}</h1>
 
-    <div><label>Vardas: </label> {{customer.name}}</div>
-    <div><label>Pavardė: </label> {{customer.surname}}</div>
-    <div><label>Suma: </label> €{{customer.amount}}</div>
-    <div><label>Grynosios mėnesio pajamos: </label> €{{customer.salary}}</div>
-    <div><label>Statusas: </label>{{customer.status}}</div>
-    <div><label>Šalis: </label>{{customer.country}}</div>
-    <div><label>Miestas: </label>{{customer.city}}</div>
-    <div><label>Adresas: </label>{{customer.address}}</div>
-    <div><label>Asmens kodas: </label>{{customer.personal_code}}</div>
-    <div><label>E. paštas: </label>{{customer.email}}</div>
-    <div><label>Telefono nr.: </label>{{customer.phone_number}}</div>
-    <div><label>Paso numeris.: </label>{{customer.doc_code}}</div>
+    <div><label>{{'Name' | translate}}: </label> {{customer.name}}</div>
+    <div><label>{{'Monthc' | translate}}: </label> {{customer.surname}}</div>
+    <div><label>{{'Loan size' | translate}}: </label> €{{customer.amount}}</div>
+    <div><label>{{'Salary '| translate }} :</label> €{{customer.salary}}</div>
+    <div><label>{{'Status' | translate}} :</label>{{customer.status}}</div>
+    <div><label>{{'Country' | translate}}: </label>{{customer.country}}</div>
+    <div><label>{{'City' | translate}}:</label>{{customer.city}}</div>
+    <div><label>{{'Address' | translate}}:</label>{{customer.address}}</div>
+    <div><label>{{'Person Code' | translate}}: </label>{{customer.personal_code}}</div>
+    <div><label>{{'Email' | translate}}: </label>{{customer.email}}</div>
+    <div><label>{{'Phone' | translate}}: </label>{{customer.phone_number}}</div>
+    <div><label>{{'Document number' | translate}}: </label>{{customer.doc_code}}</div>
 
 
     <div><label>Kodas: </label>{{customer.loanCode}}</div>
@@ -22,16 +22,16 @@
 
     <div *ngIf = "customer.status == 'Atmesta' || customer.status == 'Patvirtinta' || customer.status == 'Nepatikrinta'">
         <button (click)="acceptLoan()">
-            Patvirtinti
+          {{'patv' | translate}}
         </button>
         <button (click)="declineLoan()">
-            Atmesti
+          {{'atm' | translate}}
         </button>
     </div>
 
     <br>
     <br>
-    <button (click)="goBack()">Back</button>
+    <button (click)="goBack()">{{'back' | translate}}</button>
 
     <!--<div *ngIf = "customer.status == 'Atmesta' || customer.status == 'Patvirtinta' || customer.status == 'Nepatikrinta'">-->
         <!--<button (click)="save()">Save</button>-->

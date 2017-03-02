@@ -59,8 +59,13 @@
   "AmountLeft" : "Likusi suma",
   "paymentMON" : "Mėnesinis mokėstis(įtrauktas 0,70 EUR mėnesinis paslaugų mokėstis)",
   "LoanInc" : "Mokėtinos palūkanos",
-  "ContractPay" : "Sutarties mokėstis"
+  "ContractPay" : "Sutarties mokėstis",
 
+  "CliDom" : "Kliento duomenys",
+  "Kodee" : "Kodas",
+  "patv" : "Patvirtinti",
+  "atm" : "Atmesti",
+  "back" : "Atgal"
 
 
 
