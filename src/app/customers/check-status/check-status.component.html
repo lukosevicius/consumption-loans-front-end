@@ -9,11 +9,12 @@
 <button type="submit" class="btn btn-primary"   (click)="checkLoanCode(loan_code.value)">
   {{ 'CheckS' | translate }}
 </button>
-</div>
-<p *ngFor="let customer of customers">
+
+  <p *ngFor="let customer of customers">
   <span *ngIf="buttonClicked == 'true' " >
 
-      <span style="font-size:300%;" *ngIf="customer.loanCode == neededLoanCode ">{{customer.name}} {{customer.surname}}, Statusas: {{customer.status}}</span>
+      <span style="font-size:300%;" *ngIf="customer.loanCode == neededLoanCode ">{{customer.name}} {{customer.surname}}, {{'Status'| translate}}: {{customer.status}}</span>
 
   </span>
-</p>
+  </p>
+</div>

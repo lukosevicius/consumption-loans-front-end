@@ -37,7 +37,7 @@
   "loan title": "Informacija apie jūsų pageidaujamą paskolą",
   "loaners1": "Paskolą imsiu",
   "loaners2": "Vienas ",
-  "loaners3": "Su sutuoktiniu(Bednraskoliu)",
+  "loaners3": "Su sutuoktiniu(Bendraskoliu)",
   "spouse" : "Sutuoktino (bendraskolio) mėnesines pajamos",
   "earnings1": "Informacija apie jūsų pajamas",
   "earnings2": "Jūsų grynosios mėnesio pajamos",
@@ -59,8 +59,15 @@
   "AmountLeft" : "Likusi suma",
   "paymentMON" : "Mėnesinis mokėstis(įtrauktas 0,70 EUR mėnesinis paslaugų mokėstis)",
   "LoanInc" : "Mokėtinos palūkanos",
-  "ContractPay" : "Sutarties mokėstis"
+  "ContractPay" : "Sutarties mokėstis",
 
+  "CliDom" : "Kliento duomenys",
+  "Kodee" : "Kodas",
+  "patv" : "Patvirtinti",
+  "atm" : "Atmesti",
+  "back" : "Atgal",
+  "name/s" : "Vardas/Pavardė",
+  "konta" : "Kontaktiniai duomenys"
 
 
 

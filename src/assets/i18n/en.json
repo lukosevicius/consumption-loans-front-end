@@ -59,7 +59,14 @@
   "AmountLeft" : "Amount left",
   "paymentMON" : "Monthly payment(included 0,70 EUR monthly contract fee)",
   "LoanInc" : "Interest payable",
-  "ContractPay" : "Contract fee"
+  "ContractPay" : "Contract fee",
 
+  "CliDom" : "Client info",
+  "Kodee" : "Code",
+  "patv" : "Submit",
+  "atm" : "Decline",
+  "back" : "Back",
+  "name/s" : "Name/Surname",
+  "konta" : "Contact details"
 
 }
