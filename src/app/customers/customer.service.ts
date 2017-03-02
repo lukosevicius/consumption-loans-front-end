@@ -59,13 +59,13 @@ export class CustomerService {
 
     private acceptUrl = 'https://bank-loans-project.herokuapp.com/loan/accept';
 
-
+    //, JSON.stringify(customer)
     updateAccept(customer: Customer): Promise<Customer> {
         const url = `${this.acceptUrl}/${customer.id}`;
         return this.http
-            .put(url, JSON.stringify(customer), {headers: this.headers})
+            .put(url, {headers: this.headers})
             .toPromise()
-            .then(() => customer)
+            // .then(() => customer)
             .catch(this.handleError);
     }
 
