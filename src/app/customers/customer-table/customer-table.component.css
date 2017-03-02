@@ -1,14 +1,15 @@
 .panel > .panel-heading {
-  background-color: lightgrey;
+
+  background-color: #eeeeee;
   border-top:double;
   border-left: double;
   border-bottom: double;
   border-right:double;
-  border-top-left-radius: .5cm;
-  border-top-right-radius: .5cm;
-  border-bottom-left-radius: .5cm;
-  border-bottom-right-radius: .5cm;
-  border-color: #f5871f;
+  border-color: rgba(158, 161, 161, 0.3);
+}
+
+.panel{
+  margin-top: 7%;
 }
 
 
