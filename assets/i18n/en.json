@@ -59,9 +59,7 @@
   "AmountLeft" : "Amount left",
   "paymentMON" : "Monthly payment(included 0,70 EUR monthly contract fee)",
   "LoanInc" : "Interest payable",
-  "ContractPay" : "Contract fee",
-  "message" : "Save this code",
-  "name.se" : "Name/Surname"
+  "ContractPay" : "Contract fee"
 
 
 }

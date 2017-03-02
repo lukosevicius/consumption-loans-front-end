@@ -32,6 +32,7 @@ export class FormComponent implements OnInit {
   loan_code: string;
 
   message: string;
+  validd = false;
 
 
 
@@ -45,7 +46,7 @@ export class FormComponent implements OnInit {
     this.loan_code = getRandomInt(100, 999).toString()+'-'+getRandomInt(100, 999).toString()+'-'+getRandomInt(100, 999).toString();
     console.log(this.loan_code);
 
-    this.message = 'Užsirašykite šį kodą:'
+    this.message = "Užsirašykite kodą";
 
     this.customerService.create(name, surname, personal_code, doc_type, doc_code, country, city, address, phone_number, email, salary, amount, term, payment_day, this.loan_code);
 

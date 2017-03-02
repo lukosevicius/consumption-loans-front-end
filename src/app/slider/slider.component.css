@@ -1,17 +1,26 @@
+#page-padding {
+  padding: 0 1.5em 1.5em 1.5em;
+}
 .container{
+  background-color: #eeeeee;
   border-top:double;
   border-left: double;
   border-bottom: double;
   border-right:double;
-  background-color: #cccccc;
+  border-color: rgba(158, 161, 161, 0.3);
+  width: 70%;
+  margin-top: 7%;
 }
-#page-padding {
-  padding: 0 1.5em 1.5em 1.5em;
-}
-.hr {
-  color: #f00;
-  background-color: #f00;
-  height: 5px;
+hr {
+  -moz-border-bottom-colors: none;
+  -moz-border-image: none;
+  -moz-border-left-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-top-colors: none;
+  border-color: grey;
+  border-style: solid none;
+  border-width: 1px 0;
+  margin: 18px 0;
 }
 
 input.col-xs-8{
@@ -49,3 +58,4 @@ div.col-xs-12{
   margin-top: 50px;
   margin-left: 50px;
 }
+
