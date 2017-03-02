@@ -19,8 +19,14 @@ hr {
   border-width: 1px 0;
   margin: 18px 0;
 }
+
 .btn-primary{
   margin: 3% 0%;
   margin-left: 43%;
+}
+
+.kodukas{
+  text-align: center;
+  padding-top: 30px;
 }
 

@@ -17,6 +17,7 @@ export class SliderComponent implements OnInit {
   annualRate: number = 0.16;
   ifalone: boolean = true;
   list: Payment[];
+  error : boolean = false;
 
   constructor() {
 
@@ -36,11 +37,14 @@ export class SliderComponent implements OnInit {
     let leftValue = this.loanValue;
     monthlyPayment = this.calculateMonthlyPayment(this.loanValue, this.period);
     for (let i: number = 1; i <= this.period; i++)
+    if(monthlyPayment <= (this.incomeValue * 0.4)+(this.deptorsValue * 0.4) && this.loanValue <= 20000){
     {
       monthlyInterest = this.calculateMonthlyInterest(leftValue);
       this.list.push(new Payment(i, leftValue, monthlyPayment, monthlyInterest, 0.70));
       leftValue = leftValue - (monthlyPayment - monthlyInterest);
-    }
+    }}
+    else
+      this.error= true;
     console.log(this.list);
     //return this.list;
   }

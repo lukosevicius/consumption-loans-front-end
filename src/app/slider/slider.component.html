@@ -20,15 +20,17 @@
     <input [(ngModel)]="deptorsValue" class="digits col-xs-1">
     <label class="col-xs-1">{{'EURmo' | translate}}</label>
   </div>
-  <label style="color:grey" class="col-xs-12"><hr /></label>
+  <label style="color:grey" class="col-xs-12">
+    <hr/>
+  </label>
   <h4 class="col-xs-12"><b>{{'earnings1' | translate}}</b></h4>
   <label class="col-xs-3">{{'earnings2' | translate}}</label>
-  <input  type="range" [(ngModel)]="incomeValue" class="col-xs-7"
-          showTicks="true" max="8000" id="a3" min="245" step="1" thumbLabel="true">
+  <input type="range" [(ngModel)]="incomeValue" class="col-xs-7"
+         showTicks="true" max="8000" id="a3" min="245" step="1" thumbLabel="true">
   <input [(ngModel)]="incomeValue" class="digits col-xs-1">
   <label class="col-xs-1">{{'EURmo' | translate}}</label>
   <div class="col-xs-12">
-    <button type="submit"  class="btn btn-primary" (click)="showValue()">{{'claculate' | translate}}</button>
+    <button type="submit" class="btn btn-primary" (click)="showValue()">{{'claculate' | translate}}</button>
   </div>
   <div *ngIf="valida">
     <table class="table">
@@ -38,7 +40,7 @@
         <th>{{'AmountLeft' | translate}}</th>
         <th>{{'paymentMON' | translate}}</th>
         <th>{{'LoanInc' | translate}}</th>
-        <th>{{'ContracPay' | translate}}</th>
+        <th>{{'ContractPay' | translate}}</th>
       </tr>
       </thead>
       <tbody align="center" style="">
